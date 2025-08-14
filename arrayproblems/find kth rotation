@@ -1,0 +1,14 @@
+https://www.geeksforgeeks.org/problems/rotation4723/1
+class Solution {
+    public int findKRotation(int arr[]) {
+        // Code here
+        int count=-1;
+        for(int i=0;i<arr.length-1;i++){
+            if(arr[i]>arr[i+1]){
+            count=i;
+            break;
+            }
+        }
+        return count==-1?0:count+1;
+    }
+}
