@@ -1,0 +1,35 @@
+public class Main
+{
+    public static int unionarray(int []b,int res[],int k){
+        int m=b.length;
+        for(int i=0;i<m;i++){
+            int flag=1;
+            for(int j=0;j<k;j++){
+                if(b[i]==res[j]){
+                    flag=0;
+                    break;
+                    
+                }
+            }
+            if(flag==1){
+                res[k]=b[i];
+                k++;
+            }
+        }
+        return k;
+    }
+	public static void main(String[] args) {
+		int a[]={1,2,3,4,5,6,7,8};
+		int b[]={2,3,3,6,10,11,23,4,17};
+		int n=a.length;
+		int m=b.length;
+		int res[]=new int[n+m];
+		int k=0;
+		k=unionarray(a,res,k);
+		k=unionarray(b,res,k);
+		for(int i=0;i<k;i++){
+		    System.out.print(res[i]);
+		    System.out.print(" ");
+		}
+	}
+}
